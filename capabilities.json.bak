@@ -1,0 +1,284 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Risks",
+      "name": "riskCategory",
+      "kind": "Grouping",
+      "requiredTypes": [
+          {
+              "text": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "text": true
+          }
+      ]
+  },
+  {
+      "displayName": "Capabilities",
+      "name": "capabilityCategory",
+      "kind": "Grouping",
+      "requiredTypes": [
+          {
+              "text": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "text": true
+          }
+      ]
+  },
+  {
+      "displayName": "Elements",
+      "name": "elementCategory",
+      "kind": "Grouping",
+      "requiredTypes": [
+          {
+              "text": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "text": true
+          }
+      ]
+  },
+  {
+      "displayName": "Risk Score Data",
+      "name": "riskMeasure",
+      "kind": "Measure",
+      "requiredTypes": [
+          {
+              "integer": true
+          },
+          {
+              "numeric": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "integer": true
+          }
+      ]
+  },
+  {
+      "displayName": "Capability Score Data",
+      "name": "capabilityMeasure",
+      "kind": "Measure",
+      "requiredTypes": [
+          {
+              "integer": true
+          },
+          {
+              "numeric": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "integer": true
+          }
+      ]
+  },
+  {
+      "displayName": "Outcome Score Data",
+      "name": "elementMeasure",
+      "kind": "Measure",
+      "requiredTypes": [
+          {
+              "integer": true
+          },
+          {
+              "numeric": true
+          }
+      ],
+      "preferredTypes": [
+          {
+              "integer": true
+          }
+      ]
+  }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "Groups": {
+            "min": 0
+          },
+          "Values": {
+            "max": 1
+          }
+        }
+      ],
+      "matrix": {
+        "rows": {
+          "for": {
+            "in": "Nodes"
+          }
+        },
+        "values": {
+          "for": {
+            "in": "Values"
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "group": {
+      "displayName": "Score Colours",
+      "displayNameKey": "Score_Colours",
+      "properties": {
+        "fill": {
+          "displayName": "Score 1 Colour",
+          "displayNameKey": "Score1_Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "tooltip": {
+      "displayName": "Tooltip",
+      "displayNameKey": "Visual_Tooltip",
+      "properties": {
+        "displayUnits": {
+          "displayName": "Display Units",
+          "displayNameKey": "Visual_DisplayUnits",
+          "type": {
+            "formatting": {
+              "labelDisplayUnits": true
+            }
+          }
+        },
+        "precision": {
+          "displayName": "Decimal Places",
+          "displayNameKey": "Visual_Precision",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "legend": {
+      "displayName": "Legend",
+      "description": "Display legend options",
+      "descriptionKey": "Visual_Description_Legend",
+      "displayNameKey": "Visual_DisplayLegendOptions",
+      "properties": {
+        "show": {
+          "displayName": "Show",
+          "displayNameKey": "Visual_Show",
+          "type": {
+            "bool": true
+          }
+        },
+        "position": {
+          "displayName": "Position",
+          "displayNameKey": "Visual_Position",
+          "description": "Select the location for the legend",
+          "descriptionKey": "Visual_Description_Position",
+          "type": {
+            "enumeration": [
+              {
+                "value": "Top",
+                "displayNameKey": "Visual_Top",
+                "displayName": "Top"
+              },
+              {
+                "value": "Bottom",
+                "displayNameKey": "Visual_Bottom",
+                "displayName": "Bottom"
+              },
+              {
+                "value": "Left",
+                "displayNameKey": "Visual_Left",
+                "displayName": "Left"
+              },
+              {
+                "value": "Right",
+                "displayNameKey": "Visual_Right",
+                "displayName": "Right"
+              },
+              {
+                "value": "TopCenter",
+                "displayNameKey": "Visual_TopCenter",
+                "displayName": "Top Center"
+              },
+              {
+                "value": "BottomCenter",
+                "displayNameKey": "Visual_BottomCenter",
+                "displayName": "Bottom Center"
+              },
+              {
+                "value": "LeftCenter",
+                "displayNameKey": "Visual_LeftCenter",
+                "displayName": "Left Center"
+              },
+              {
+                "value": "RightCenter",
+                "displayNameKey": "Visual_RightCenter",
+                "displayName": "Right Center"
+              }
+            ]
+          }
+        },
+        "showTitle": {
+          "displayName": "Title",
+          "displayNameKey": "Visual_Title",
+          "description": "Display a title for legend symbols",
+          "descriptionKey": "Visual_Description_Title",
+          "type": {
+            "bool": true
+          }
+        },
+        "titleText": {
+          "displayName": "Legend Name",
+          "displayNameKey": "Visual_LegendName",
+          "description": "Title text",
+          "descriptionKey": "Visual_Description_LegendName",
+          "type": {
+            "text": true
+          },
+          "suppressFormatPainterCopy": true
+        },
+        "labelColor": {
+          "displayName": "Color",
+          "displayNameKey": "Visual_Color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "fontSize": {
+          "displayName": "Text Size",
+          "displayNameKey": "Visual_TextSize",
+          "type": {
+            "formatting": {
+              "fontSize": true
+            }
+          }
+        }
+      }
+    }
+  },
+   "sorting": {
+        "implicit": {
+            "clauses": [
+                {
+                    "role": "Values",
+                    "direction": 1
+                }
+            ]
+        }
+    }
+}
