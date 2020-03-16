@@ -425,7 +425,8 @@ module powerbi.extensibility.visual {
                     .classed(this.appCssConstants.sliceLabel.className, true);
 
                     // font size + slice padding
-                    const TEXT_COLOR = "lightgrey";
+                    //const TEXT_COLOR = "lightgrey";
+                    const TEXT_COLOR = this.settings.slicesettings.slicefontcolour;
                     all
                     .filter((d,i,o):boolean => {
                         return (d.depth == 3);
@@ -451,7 +452,8 @@ module powerbi.extensibility.visual {
                     })
                     .text((dataPoint: SunburstDataPoint) => dataPoint.name)
                     .attr("fill", TEXT_COLOR)
-                    .style("font-size", 11);
+                    // Font size for the outer ring
+                    .style("font-size", 6.5);
 
                     // add textPath to all nodes
                     all
@@ -465,6 +467,7 @@ module powerbi.extensibility.visual {
                         return (d.depth == 2); // capabilities only
                     })
                     .each(this.wrapPathText(5))
+                    // Font size of the middle ring
                     .attr("font-size", this.smallestCapabablityFontSize); // variable 'smallestCapabablityFontSize' is assigned in this.wrapPathText()
                     console.log("smallestCapabablityFontSize: " + this.smallestCapabablityFontSize);
                     

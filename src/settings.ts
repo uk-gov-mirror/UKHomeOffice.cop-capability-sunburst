@@ -33,6 +33,11 @@ module powerbi.extensibility.visual {
         public legend: LegendSettings = new LegendSettings();
         public tooltip: SunburstTooltipSettings = new SunburstTooltipSettings();
         public ratingcolors: SunburstRatingColorSettings = new SunburstRatingColorSettings();
+        public slicesettings: SunburstSliceColorSettings = new SunburstSliceColorSettings();
+    }
+
+    export class SunburstSliceColorSettings {
+        public slicefontcolour: string = "#000000";
     }
 
     export class SunburstGroupSettings {
