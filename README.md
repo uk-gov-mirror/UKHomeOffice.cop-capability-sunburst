@@ -20,12 +20,12 @@ https://community.powerbi.com/t5/Developer/How-to-Debug-while-developing-Custom-
 3. Import pbiviz.  
 ![Visual Import](images/importvisual.png)
 4. The visual can be added to the report through drag and drop or by selecting.
-5. Populate the 'Groups' fields as follows:
+5. Populate the 'Groups' fields as follows, you must have three fiels present:
     - Threat
     - Capability
     - Component  
 ![Groups Update](images/updategroups.png)
-6. Populate the 'Values' field using a 3 digit value (e.g. 111)  
+6. Populate the 'Values' field using a 3 digit value, this must be numeric. (e.g. 111)  
 ![Values Update](images/updatevalues.png)
 7. Each digit represents a different colour e.g. 111 would indicate the following:
     - Threat > Black
