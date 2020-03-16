@@ -24,9 +24,9 @@ https://community.powerbi.com/t5/Developer/How-to-Debug-while-developing-Custom-
     - Threat
     - Capability
     - Component  
-![Visual Import](images/updategroups.png)
+![Groups Update](images/updategroups.png)
 6. Populate the 'Values' field using a 3 digit value (e.g. 111)  
-![Visual Import](images/updatevalues.png)
+![Values Update](images/updatevalues.png)
 7. Each digit represents a different colour e.g. 111 would indicate the following:
     - Threat > Black
     - Capability > Black
