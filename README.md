@@ -20,7 +20,7 @@ https://community.powerbi.com/t5/Developer/How-to-Debug-while-developing-Custom-
 3. Import pbiviz.  
 ![Visual Import](images/importvisual.png)
 4. The visual can be added to the report through drag and drop or by selecting.
-5. Populate the 'Groups' fields as follows, you must have three fiels present:
+5. Populate the 'Groups' fields as follows, you must have three fields present:
     - Threat
     - Capability
     - Component  
