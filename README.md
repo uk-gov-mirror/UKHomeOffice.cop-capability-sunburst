@@ -14,7 +14,7 @@ https://github.com/Microsoft/PowerBI-visuals-tools
 6. Finally, breakpoints don't work, so fallback to logging like described here:
 https://community.powerbi.com/t5/Developer/How-to-Debug-while-developing-Custom-Visuals/td-p/187053
 
-**HOW TO INSTALL **PBIVIZ**
+**HOW TO INSTALL PBIVIZ**
 1. Download/Build the pbiviz file.
 2. Open Power BI report using Power BI Desktop [version 2.79.5768.663 64-bit (March 2020) or later].
 3. Import pbiviz.
