@@ -130,6 +130,23 @@
           }
         }
     },
+    "slicesettings": {
+      "displayName": "Slice Settings",
+      "displayNameKey": "Visual_SliceSettings",
+      "properties": {
+        "slicefontcolour": {
+          "displayName": "Slice Font Colour",
+          "displayNameKey": "Visual_SliceFontColour",
+          "type": {
+            "fill": {
+                "solid": {
+                  "color": true
+                }
+              }
+            }
+          }
+        }
+      },
     "tooltip": {
       "displayName": "Tooltip",
       "displayNameKey": "Visual_Tooltip",
