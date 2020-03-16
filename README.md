@@ -23,9 +23,22 @@ https://community.powerbi.com/t5/Developer/How-to-Debug-while-developing-Custom-
 5. Populate the 'Groups' fields as follows:
     - Threat
     - Capability
-    - Component
-6. Populate the 'Values' field using a 3 digit value (e.g. 111)
+    - Component  
+![Visual Import](images/updategroups.png)
+6. Populate the 'Values' field using a 3 digit value (e.g. 111)  
+![Visual Import](images/updatevalues.png)
 7. Each digit represents a different colour e.g. 111 would indicate the following:
     - Threat > Black
     - Capability > Black
-    - Component > Black
+    - Component > Black  
+
+The full list of colours can be found below. These colours are set by default however can be changed in the settings.
+
+Digit Value | Colour | Hex Value
+--- | --- | ---
+1 | Black | `#5E5E5E`
+2 | Red | `#E03531`
+3 | Amber | `#F0BD27`
+4 | Green | `#51B364`
+
+
