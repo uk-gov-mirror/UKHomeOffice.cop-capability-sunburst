@@ -2,6 +2,9 @@
 
 # Installation
 
+Install Node
+Visual Studio Code terminal - NPM Install
+
 Power BI Tools (SDK):
 https://github.com/Microsoft/PowerBI-visuals-tools
 
