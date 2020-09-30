@@ -426,7 +426,10 @@ module powerbi.extensibility.visual {
 
                     // font size + slice padding
                     //const TEXT_COLOR = "lightgrey";
-                    const TEXT_COLOR = this.settings.slicesettings.slicefontcolour;
+                    const TEXT_COLOR_OUTER = this.settings.sliceoutersettings.slicefontcolour;
+                    const TEXT_SIZE_OUTER = this.settings.sliceoutersettings.fontSize;
+                    const TEXT_COLOR_MIDDLE = this.settings.slicemiddlesettings.slicefontcolour;
+                    const TEXT_SIZE_MIDDLE = this.settings.slicemiddlesettings.fontSize;
                     all
                     .filter((d,i,o):boolean => {
                         return (d.depth == 3);
@@ -451,15 +454,15 @@ module powerbi.extensibility.visual {
                         return "translate(" + cx +"," + cy +")" + rotate;
                     })
                     .text((dataPoint: SunburstDataPoint) => dataPoint.name)
-                    .attr("fill", TEXT_COLOR)
+                    .attr("fill", TEXT_COLOR_OUTER)
                     // Font size for the outer ring
-                    .style("font-size", 6.5);
+                    .style("font-size", TEXT_SIZE_OUTER);
 
                     // add textPath to all nodes
                     all
                     .attr("dy", Sunburst.labelShift)
                     .append("textPath")
-                    .attr("fill", TEXT_COLOR)
+                    .attr("fill", TEXT_COLOR_MIDDLE)
                     .attr("startOffset", "50%")
                     .attr("xlink:href", (d, i) => "#sliceLabel_" + i)
                     .text((dataPoint: SunburstDataPoint) => dataPoint.name)
@@ -468,7 +471,8 @@ module powerbi.extensibility.visual {
                     })
                     .each(this.wrapPathText(5))
                     // Font size of the middle ring
-                    .attr("font-size", this.smallestCapabablityFontSize); // variable 'smallestCapabablityFontSize' is assigned in this.wrapPathText()
+                    //.attr("font-size", this.smallestCapabablityFontSize); // variable 'smallestCapabablityFontSize' is assigned in this.wrapPathText()
+                    .attr("font-size", TEXT_SIZE_MIDDLE);
                     console.log("smallestCapabablityFontSize: " + this.smallestCapabablityFontSize);
                     
                     // remove textPath from Element nodes (depth = 3), because this is the only way filtering works properly on the hierarchy
@@ -724,7 +728,8 @@ module powerbi.extensibility.visual {
             return [{
                 displayName,
                 // remove the number from the toopltip as it is confusing for the purpose of this sunburst
-                value: null //this.getFormattedValue(value, formatter)
+                //value: null //this.getFormattedValue(value, formatter)
+                value: this.getFormattedValue(value, formatter)
             }];
         }
 
