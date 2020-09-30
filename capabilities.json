@@ -130,8 +130,8 @@
           }
         }
     },
-    "slicesettings": {
-      "displayName": "Slice Settings",
+    "sliceoutersettings": {
+      "displayName": "Slice Outer Settings",
       "displayNameKey": "Visual_SliceSettings",
       "properties": {
         "slicefontcolour": {
@@ -144,9 +144,44 @@
                 }
               }
             }
+          },
+          "fontSize": {
+            "displayName": "Text Size",
+            "displayNameKey": "Visual_TextSize",
+            "type": {
+              "formatting": {
+                "fontSize": true
+              }
+            }
           }
         }
       },
+      "slicemiddlesettings": {
+        "displayName": "Slice Middle Settings",
+        "displayNameKey": "Visual_SliceSettings",
+        "properties": {
+          "slicefontcolour": {
+            "displayName": "Slice Font Colour",
+            "displayNameKey": "Visual_SliceFontColour",
+            "type": {
+              "fill": {
+                  "solid": {
+                    "color": true
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "displayName": "Text Size",
+              "displayNameKey": "Visual_TextSize",
+              "type": {
+                "formatting": {
+                  "fontSize": true
+                }
+              }
+            }
+          }
+        },
     "tooltip": {
       "displayName": "Tooltip",
       "displayNameKey": "Visual_Tooltip",
